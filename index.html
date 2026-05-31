@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deep Learning Study Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <header class="brand">
+          <div>
+            <p class="eyebrow">Deep Learning</p>
+            <h1>Study Hub</h1>
+          </div>
+          <button class="icon-button mobile-only" id="closeSidebar" aria-label="Đóng danh sách">×</button>
+        </header>
+
+        <section class="sidebar-tools" aria-label="Công cụ tìm kiếm và lọc">
+          <label class="search-box">
+            <span>Tìm kiếm nội dung</span>
+            <input id="searchInput" type="search" placeholder="CNN, backpropagation, Transformer..." />
+          </label>
+
+          <div class="filters" aria-label="Bộ lọc nội dung">
+            <button class="filter-chip active" data-filter="all">Tất cả</button>
+            <button class="filter-chip" data-filter="formula">Có công thức</button>
+            <button class="filter-chip" data-filter="question">Có câu hỏi</button>
+          </div>
+
+          <div class="course-stats" id="courseStats"></div>
+        </section>
+
+        <nav class="deck-list" id="deckList" aria-label="Danh sách phần học"></nav>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="icon-button mobile-only" id="openSidebar" aria-label="Mở danh sách">☰</button>
+          <div class="progress-wrap" aria-label="Tiến độ học">
+            <div class="progress-copy" id="progressCopy"></div>
+            <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+          </div>
+          <div class="top-actions" aria-label="Điều hướng phần học">
+            <button class="ghost-button" id="prevSlide">Trước</button>
+            <button class="primary-button" id="nextSlide">Tiếp</button>
+          </div>
+        </header>
+
+        <section class="hero-panel" aria-labelledby="slideTitle">
+          <div class="hero-copy">
+            <p class="eyebrow" id="deckLabel"></p>
+            <h2 id="slideTitle"></h2>
+            <div class="keyword-row" id="keywordRow" aria-label="Từ khóa chính"></div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="neural-map">
+              <span class="node n1"></span>
+              <span class="node n2"></span>
+              <span class="node n3"></span>
+              <span class="node n4"></span>
+              <span class="node n5"></span>
+              <span class="node n6"></span>
+              <span class="link l1"></span>
+              <span class="link l2"></span>
+              <span class="link l3"></span>
+              <span class="link l4"></span>
+              <span class="link l5"></span>
+              <span class="scan-line"></span>
+            </div>
+            <a class="source-link" id="sourceLink" target="_blank" rel="noreferrer">Mở PDF gốc</a>
+          </div>
+        </section>
+
+        <section class="learning-layout" aria-label="Nội dung học">
+          <article class="study-card">
+            <div class="lesson-content" id="lessonContent"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="data/slides.js"></script>
+    <script src="data/sections.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
